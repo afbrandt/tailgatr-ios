@@ -1,0 +1,315 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49F6A8171C4AD18100488026 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F6A8161C4AD18100488026 /* AppDelegate.swift */; };
+		49F6A81C1C4AD18100488026 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F6A81A1C4AD18100488026 /* Main.storyboard */; };
+		49F6A81E1C4AD18100488026 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F6A81D1C4AD18100488026 /* Assets.xcassets */; };
+		49F6A8211C4AD18100488026 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F6A81F1C4AD18100488026 /* LaunchScreen.storyboard */; };
+		49F6A8291C4AD1C600488026 /* TGTRFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F6A8281C4AD1C600488026 /* TGTRFeedViewController.swift */; };
+		49F6A82B1C4AD2BF00488026 /* TGTREvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F6A82A1C4AD2BF00488026 /* TGTREvent.swift */; };
+		49F6A82E1C4AD2DD00488026 /* TGTREventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F6A82C1C4AD2DD00488026 /* TGTREventTableViewCell.swift */; };
+		49F6A82F1C4AD2DD00488026 /* TGTREventTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49F6A82D1C4AD2DD00488026 /* TGTREventTableViewCell.xib */; };
+		49F6A8311C4AD5BD00488026 /* TGTRWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F6A8301C4AD5BD00488026 /* TGTRWebService.swift */; };
+		49F6A8341C4AFB2800488026 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49F6A8321C4AFB2800488026 /* Montserrat-Bold.ttf */; };
+		49F6A8351C4AFB2800488026 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 49F6A8331C4AFB2800488026 /* Montserrat-Regular.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		49F6A8131C4AD18100488026 /* Tailgatr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tailgatr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49F6A8161C4AD18100488026 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		49F6A81B1C4AD18100488026 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49F6A81D1C4AD18100488026 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49F6A8201C4AD18100488026 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		49F6A8221C4AD18100488026 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49F6A8281C4AD1C600488026 /* TGTRFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGTRFeedViewController.swift; sourceTree = "<group>"; };
+		49F6A82A1C4AD2BF00488026 /* TGTREvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGTREvent.swift; sourceTree = "<group>"; };
+		49F6A82C1C4AD2DD00488026 /* TGTREventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGTREventTableViewCell.swift; sourceTree = "<group>"; };
+		49F6A82D1C4AD2DD00488026 /* TGTREventTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGTREventTableViewCell.xib; sourceTree = "<group>"; };
+		49F6A8301C4AD5BD00488026 /* TGTRWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TGTRWebService.swift; sourceTree = "<group>"; };
+		49F6A8321C4AFB2800488026 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		49F6A8331C4AFB2800488026 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49F6A8101C4AD18100488026 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49F6A80A1C4AD18100488026 = {
+			isa = PBXGroup;
+			children = (
+				49F6A8151C4AD18100488026 /* Tailgatr */,
+				49F6A8141C4AD18100488026 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49F6A8141C4AD18100488026 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49F6A8131C4AD18100488026 /* Tailgatr.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49F6A8151C4AD18100488026 /* Tailgatr */ = {
+			isa = PBXGroup;
+			children = (
+				49F6A8161C4AD18100488026 /* AppDelegate.swift */,
+				49F6A81A1C4AD18100488026 /* Main.storyboard */,
+				49F6A82A1C4AD2BF00488026 /* TGTREvent.swift */,
+				49F6A82C1C4AD2DD00488026 /* TGTREventTableViewCell.swift */,
+				49F6A82D1C4AD2DD00488026 /* TGTREventTableViewCell.xib */,
+				49F6A8281C4AD1C600488026 /* TGTRFeedViewController.swift */,
+				49F6A8301C4AD5BD00488026 /* TGTRWebService.swift */,
+				49F6A81D1C4AD18100488026 /* Assets.xcassets */,
+				49F6A81F1C4AD18100488026 /* LaunchScreen.storyboard */,
+				49F6A8321C4AFB2800488026 /* Montserrat-Bold.ttf */,
+				49F6A8331C4AFB2800488026 /* Montserrat-Regular.ttf */,
+				49F6A8221C4AD18100488026 /* Info.plist */,
+			);
+			path = Tailgatr;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49F6A8121C4AD18100488026 /* Tailgatr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49F6A8251C4AD18100488026 /* Build configuration list for PBXNativeTarget "Tailgatr" */;
+			buildPhases = (
+				49F6A80F1C4AD18100488026 /* Sources */,
+				49F6A8101C4AD18100488026 /* Frameworks */,
+				49F6A8111C4AD18100488026 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tailgatr;
+			productName = Tailgatr;
+			productReference = 49F6A8131C4AD18100488026 /* Tailgatr.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49F6A80B1C4AD18100488026 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = TeamTailgatr;
+				TargetAttributes = {
+					49F6A8121C4AD18100488026 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 49F6A80E1C4AD18100488026 /* Build configuration list for PBXProject "Tailgatr" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 49F6A80A1C4AD18100488026;
+			productRefGroup = 49F6A8141C4AD18100488026 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49F6A8121C4AD18100488026 /* Tailgatr */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49F6A8111C4AD18100488026 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49F6A8351C4AFB2800488026 /* Montserrat-Regular.ttf in Resources */,
+				49F6A8341C4AFB2800488026 /* Montserrat-Bold.ttf in Resources */,
+				49F6A8211C4AD18100488026 /* LaunchScreen.storyboard in Resources */,
+				49F6A82F1C4AD2DD00488026 /* TGTREventTableViewCell.xib in Resources */,
+				49F6A81E1C4AD18100488026 /* Assets.xcassets in Resources */,
+				49F6A81C1C4AD18100488026 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49F6A80F1C4AD18100488026 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49F6A82B1C4AD2BF00488026 /* TGTREvent.swift in Sources */,
+				49F6A8311C4AD5BD00488026 /* TGTRWebService.swift in Sources */,
+				49F6A82E1C4AD2DD00488026 /* TGTREventTableViewCell.swift in Sources */,
+				49F6A8171C4AD18100488026 /* AppDelegate.swift in Sources */,
+				49F6A8291C4AD1C600488026 /* TGTRFeedViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		49F6A81A1C4AD18100488026 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49F6A81B1C4AD18100488026 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		49F6A81F1C4AD18100488026 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49F6A8201C4AD18100488026 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49F6A8231C4AD18100488026 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		49F6A8241C4AD18100488026 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		49F6A8261C4AD18100488026 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tailgatr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tailgatr.Tailgatr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		49F6A8271C4AD18100488026 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Tailgatr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tailgatr.Tailgatr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49F6A80E1C4AD18100488026 /* Build configuration list for PBXProject "Tailgatr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49F6A8231C4AD18100488026 /* Debug */,
+				49F6A8241C4AD18100488026 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49F6A8251C4AD18100488026 /* Build configuration list for PBXNativeTarget "Tailgatr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49F6A8261C4AD18100488026 /* Debug */,
+				49F6A8271C4AD18100488026 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49F6A80B1C4AD18100488026 /* Project object */;
+}
