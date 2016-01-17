@@ -18,6 +18,7 @@ class TGTRFeedViewController: UITableViewController {
     
     let webService = TGTRWebService()
     let locationManager = CLLocationManager()
+    var lastLocation: CLLocation!
     
     let cellIdentifier = "EventCell"
     
@@ -38,14 +39,18 @@ class TGTRFeedViewController: UITableViewController {
         webService.getEventsWithLocation(location) {
             (success: Bool, events: [TGTREvent]) in
             
+//            self.events = [TGTREvent()]
+//            self.tableView.reloadData()
+            
             self.isFetchingEvents = false
             self.didFetchEvents = true
             if success {
-                print("did succeed")
+                print("fetched \(events.count) events")
                 self.events = events
                 self.tableView.reloadData()
             } else {
                 print("did fail")
+                
             }
         }
     }
@@ -59,6 +64,7 @@ class TGTRFeedViewController: UITableViewController {
         
         hasLocationPermission = hasPermission
     }
+
 }
 
 extension TGTRFeedViewController {
@@ -68,8 +74,8 @@ extension TGTRFeedViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return events.count
-        return 3
+        return events.count
+//        return 3
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -82,6 +88,7 @@ extension TGTRFeedViewController {
         }
         
 //        cell!.event = events[indexPath.row]
+        cell!.userLocation = self.lastLocation
         cell!.prepare()
         
         return cell!
@@ -91,7 +98,7 @@ extension TGTRFeedViewController {
 extension TGTRFeedViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 210.0
+        return 240.0
     }
 }
 
@@ -115,6 +122,7 @@ extension TGTRFeedViewController: CLLocationManagerDelegate {
         if !isFetchingEvents && !didFetchEvents {
             if let location = locations.first {
                 self.fetchEventsForLocation(location.coordinate)
+                self.lastLocation = location
             }
         }
     }

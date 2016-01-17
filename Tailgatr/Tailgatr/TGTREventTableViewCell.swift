@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 class TGTREventTableViewCell: UITableViewCell {
     
@@ -16,6 +17,8 @@ class TGTREventTableViewCell: UITableViewCell {
     @IBOutlet weak var transportationTimeLabel: UILabel!
     
     var event: TGTREvent!
+    var userLocation: CLLocation!
+    let webService = TGTRWebService()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +26,17 @@ class TGTREventTableViewCell: UITableViewCell {
     }
     
     func prepare() {
+        
+        webService.getTravelTimeFromCoordinate(userLocation.coordinate, toCoordinate: userLocation.coordinate) {
+            (success, time) -> (Void) in
+            if (success) {
+                print("fetched time")
+                self.transportationTimeLabel.text = "\(time) minutes away"
+            } else {
+                print("did not fetch time")
+                self.transportationTimeLabel.text = "some minutes away"
+            }
+        }
         
         let r = Double(rand() % Int32(255))
         let g = Double(rand() % Int32(255))

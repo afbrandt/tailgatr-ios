@@ -68,11 +68,11 @@
 			children = (
 				49F6A8161C4AD18100488026 /* AppDelegate.swift */,
 				49F6A81A1C4AD18100488026 /* Main.storyboard */,
+				49F6A8281C4AD1C600488026 /* TGTRFeedViewController.swift */,
+				49F6A8301C4AD5BD00488026 /* TGTRWebService.swift */,
 				49F6A82A1C4AD2BF00488026 /* TGTREvent.swift */,
 				49F6A82C1C4AD2DD00488026 /* TGTREventTableViewCell.swift */,
 				49F6A82D1C4AD2DD00488026 /* TGTREventTableViewCell.xib */,
-				49F6A8281C4AD1C600488026 /* TGTRFeedViewController.swift */,
-				49F6A8301C4AD5BD00488026 /* TGTRWebService.swift */,
 				49F6A81D1C4AD18100488026 /* Assets.xcassets */,
 				49F6A81F1C4AD18100488026 /* LaunchScreen.storyboard */,
 				49F6A8321C4AFB2800488026 /* Montserrat-Bold.ttf */,
