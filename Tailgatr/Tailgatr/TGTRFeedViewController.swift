@@ -34,6 +34,14 @@ class TGTRFeedViewController: UITableViewController {
         locationManager.startUpdatingLocation()
     }
     
+    override func viewDidAppear(animated: Bool) {
+        tableView.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        
+        if let vw = tableView.backgroundView {
+            vw.backgroundColor = UIColor.groupTableViewBackgroundColor()
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == DETAIL_SEGUE {
             if let vc = segue.destinationViewController as? TGTRDetailViewController, let path = self.tableView.indexPathForSelectedRow {
@@ -96,11 +104,23 @@ extension TGTRFeedViewController {
             cell = nibs[0] as? TGTREventTableViewCell
         }
         
+        cell!.backgroundColor = UIColor.clearColor()
+        if let vw = cell?.backgroundView {
+            vw.backgroundColor = UIColor.clearColor()
+        }
+        
         cell!.event = events[indexPath.row]
         cell!.userLocation = self.lastLocation
         cell!.prepare()
         
         return cell!
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if let cell = cell as? TGTREventTableViewCell {
+//            cell.prepare()
+        }
     }
     
 }

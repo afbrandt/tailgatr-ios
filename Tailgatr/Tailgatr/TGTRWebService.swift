@@ -25,7 +25,8 @@ struct TGTRWebService {
     func getEventsWithLocation(location: CLLocationCoordinate2D, callback: (success: Bool, events: [TGTREvent]) -> (Void)) {
 //        let events = []
 //        let success = false
-        let url = NSURL(string: "\(BASE_URL)\(FEED_ENDPOINT)?lat=\(location.latitude)&lng=\(location.longitude)&dist=1")
+//        let url = NSURL(string: "\(BASE_URL)\(FEED_ENDPOINT)?lat=\(location.latitude)&lng=\(location.longitude)&dist=1")
+        let url = NSURL(string: "\(BASE_URL)\(FEED_ENDPOINT)")
         let request = NSURLRequest(URL: url!)
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) { () -> Void in
@@ -65,7 +66,8 @@ struct TGTRWebService {
     }
     
     func getTravelTimeFromCoordinate(from: CLLocationCoordinate2D, toCoordinate to:CLLocationCoordinate2D, callback: (success: Bool, time: Int) -> (Void)) {
-        let url = NSURL(string: "\(CITYMAPPER_URL)?startcoord=\(from.latitude),\(from.longitude)&endcoord=\(to.latitude),\(to.longitude)&key=fdb6996ab71442a5ef004fa22a5abcc6")
+        let key = "girlsintech2016"
+        let url = NSURL(string: "\(CITYMAPPER_URL)?startcoord=\(from.latitude)%2C\(from.longitude)&endcoord=\(to.latitude)%2C\(to.longitude)&key=\(key)")
         let request = NSURLRequest(URL: url!)
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) { () -> Void in
@@ -85,8 +87,42 @@ struct TGTRWebService {
                         }
                     })
                 } else {
+                    print("\(data)")
                     dispatch_async(dispatch_get_main_queue(), { () -> Void in
                         callback(success: false, time: -1)
+                    })
+                }
+            })
+            
+            task.resume()
+        }
+    }
+    
+    func getImageFromURL(url: NSURL, callback: (success: Bool, image: UIImage?) -> (Void)) {
+        
+        let request = NSURLRequest(URL: url)
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) { () -> Void in
+            let task = self.session.dataTaskWithRequest(request, completionHandler: {
+                (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
+                if let error = error {
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        callback(success: false, image: nil)
+                        print("error during fetch: \(error)")
+                    })
+                } else if let data = data{
+                    let image = UIImage(data: data)
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+//                        if let time = dict["travel_time_minutes"]?.integerValue {
+//                            print("\(time) to travel")
+//                            callback(success: true, image: image)
+//                        }
+                        callback(success: true, image: image)
+                    })
+                } else {
+                    print("\(data)")
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        callback(success: false, image: nil)
                     })
                 }
             })
