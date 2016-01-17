@@ -21,6 +21,7 @@ class TGTRFeedViewController: UITableViewController {
     var lastLocation: CLLocation!
     
     let cellIdentifier = "EventCell"
+    let DETAIL_SEGUE = "toDetailView"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,15 @@ class TGTRFeedViewController: UITableViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == DETAIL_SEGUE {
+            if let vc = segue.destinationViewController as? TGTRDetailViewController, let path = self.tableView.indexPathForSelectedRow {
+                let event = events[path.row]
+                vc.event = event
+            }
+        }
     }
     
     func fetchEventsForLocation(location: CLLocationCoordinate2D) {
@@ -64,7 +74,6 @@ class TGTRFeedViewController: UITableViewController {
         
         hasLocationPermission = hasPermission
     }
-
 }
 
 extension TGTRFeedViewController {
@@ -87,18 +96,23 @@ extension TGTRFeedViewController {
             cell = nibs[0] as? TGTREventTableViewCell
         }
         
-//        cell!.event = events[indexPath.row]
+        cell!.event = events[indexPath.row]
         cell!.userLocation = self.lastLocation
         cell!.prepare()
         
         return cell!
     }
+    
 }
 
 extension TGTRFeedViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 240.0
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.performSegueWithIdentifier(DETAIL_SEGUE, sender: self)
     }
 }
 

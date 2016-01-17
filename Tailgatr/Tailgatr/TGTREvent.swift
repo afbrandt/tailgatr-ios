@@ -34,5 +34,4 @@ struct TGTREvent {
         
         return event
     }
-
 }

@@ -47,10 +47,45 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Tailgatr" id="kNM-Vd-Yb0"/>
+                    <connections>
+                        <segue destination="K1L-4w-lVM" kind="show" identifier="toDetailView" id="TxJ-KL-nie"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BCt-cf-FXk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1825" y="353"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="bQH-Uf-vAs">
+            <objects>
+                <viewController id="K1L-4w-lVM" customClass="TGTRDetailViewController" customModule="Tailgatr" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Ac-xY-NfY"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZWg-kL-LO0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NAm-Bn-6K0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThP-vT-yG0">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ThP-vT-yG0" firstAttribute="top" secondItem="8Ac-xY-NfY" secondAttribute="bottom" id="Lvx-j2-fLw"/>
+                            <constraint firstItem="ThP-vT-yG0" firstAttribute="centerX" secondItem="NAm-Bn-6K0" secondAttribute="centerX" id="bWW-dw-tbg"/>
+                            <constraint firstItem="ThP-vT-yG0" firstAttribute="width" secondItem="NAm-Bn-6K0" secondAttribute="width" id="eh4-Ou-gxl"/>
+                            <constraint firstItem="ZWg-kL-LO0" firstAttribute="top" secondItem="ThP-vT-yG0" secondAttribute="bottom" id="oLG-dd-aVg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="ThP-vT-yG0" id="LsM-z6-9OU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hBh-GH-9HK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2581" y="353"/>
         </scene>
     </scenes>
 </document>
